@@ -10,6 +10,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
+  FormMessage,
 } from "@/components/ui/form";
 import { FormFieldType } from "./form/PatientForm";
 import Image from "next/image";
@@ -56,6 +57,7 @@ const RenderInput = ({
     dateFormat,
     renderSkeleton,
   } = props;
+
   switch (fieldType) {
     case FormFieldType.INPUT:
       return (
@@ -173,6 +175,7 @@ const CustomFormField = (props: CustomFormProps) => {
           )}
 
           <RenderInput field={field} props={props} />
+          <FormMessage className="shad-error" />
         </FormItem>
       )}
     />

@@ -69,10 +69,12 @@ export const registerPatient = async ({
   try {
     let file;
     if (identificationDocument) {
-      const inputFile = InputFile.fromBuffer(
-        identificationDocument?.get("blobFile") as Blob,
-        identificationDocument?.get("fileName") as string
-      );
+      const inputFile =
+        identificationDocument &&
+        InputFile.fromBuffer(
+          identificationDocument?.get("blobFile") as Blob,
+          identificationDocument?.get("fileName") as string
+        );
 
       file = await storage.createFile(
         NEXT_PUBLIC_BUCKET_ID!,

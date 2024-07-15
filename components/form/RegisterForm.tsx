@@ -44,7 +44,6 @@ const RegisterForm = ({ user }: { user: User }) => {
       phone: user.phone,
     },
   });
-
   const onSubmit = async (values: z.infer<typeof PatientFormValidation>) => {
     setIsLoading(true);
     let formData;
@@ -102,7 +101,7 @@ const RegisterForm = ({ user }: { user: User }) => {
         className="flex-1 space-y-12"
       >
         <section className="space-y-4">
-          <h1 className="header">Welcome</h1>
+          <h1 className="header capitalize">Welcome {user.name}</h1>
           <p className="text-dark-700">Let us know more about yourself</p>
         </section>
 
