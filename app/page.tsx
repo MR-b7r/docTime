@@ -8,7 +8,7 @@ export default function Home({ searchParams }: SearchParamProps) {
   return (
     <div className="flex h-screen max-h-screen">
       {isAdmin && <PasskeyModal />}
-      <section className="remove-scrollbar container my-auto">
+      <section className="remove-scrollbar container ">
         <div className="sub-container max-w-[496px]">
           <Image
             src={"/assets/icons/logo-full.svg"}
@@ -18,7 +18,7 @@ export default function Home({ searchParams }: SearchParamProps) {
             className="mb-12 h-10 w-fit"
           />
           <PatientForm />
-          <div className="text-14-regular mt-10 flex justify-between">
+          <div className="text-14-regular mt-5 flex justify-between">
             <p className="justify-items-end text-dark-600 xl:text-left">
               © 2024 DocTime
             </p>

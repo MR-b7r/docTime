@@ -21,7 +21,16 @@ const Admin = async () => {
             className="h-8 w-fit"
           />
         </Link>
-        <p className="text-16-semibold">Admin Dashboard</p>
+        <div className="flex items-center gap-2">
+          <p className="text-14-semibold">Admin Dashboard</p>
+          <Image
+            src="/assets/images/admin.png"
+            width={32}
+            height={32}
+            className="size-8"
+            alt="logo"
+          />
+        </div>
       </header>
 
       <main className="admin-main">
